@@ -13,7 +13,6 @@ const availableGenerators = [
   "delete",
   "dexter",
   "facepalm",
-  "hitler",
   "jail",
   "jokeoverhead",
   "karaba",
