@@ -37,8 +37,8 @@ module.exports = {
 
   DASHBOARD: {
     enabled: true, // enable or disable dashboard
-    baseURL: "http://localhost:8080", // base url
-    failureURL: "http://localhost:8080", // failure redirect url
+    baseURL: "https://discord-bot.up.railway.app/", // base url
+    failureURL: "https://discord-bot.up.railway.app/", // failure redirect url
     port: "8080", // port to run the bot on
   },
 
