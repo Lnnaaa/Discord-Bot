@@ -37,8 +37,8 @@ module.exports = {
 
   DASHBOARD: {
     enabled: true, // enable or disable dashboard
-    baseURL: "https://discord-bot.up.railway.app/", // base url
-    failureURL: "https://discord-bot.up.railway.app/", // failure redirect url
+    baseURL: "https://noctaria.up.railway.app", // base url
+    failureURL: "https://noctaria.up.railway.app", // failure redirect url
     port: "8080", // port to run the bot on
   },
 
