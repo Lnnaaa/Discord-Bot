@@ -16,8 +16,8 @@ router.get("/login", async function (req, res) {
     return res.redirect(
       `https://discordapp.com/api/oauth2/authorize?client_id=${
         req.client.user.id
-      }&scope=identify%20guilds&response_type=code&redirect_uri=${encodeURIComponent(
-        req.client.config.DASHBOARD.baseURL + "/api/callback"
+      }&response_type=code&redirect_uri=${encodeURIComponent(
+        req.client.config.DASHBOARD.baseURL + "/api/callback&scope=identify+guilds"
       )}&state=${req.query.state || "no"}`
     );
   }
