@@ -13,18 +13,22 @@ router.get("/login", async function (req, res) {
       return res.redirect("/login");
     }
 
-    return res.redirect(
-      `https://discordapp.com/api/oauth2/authorize?client_id=${
-        req.client.user.id
-      }&redirect_uri=${encodeURIComponent(
-        req.client.config.DASHBOARD.baseURL + "/api/callback"
-      )}&response_type=code&scope=identify%20guilds&state=${req.query.state || "no"}`
-    );
+    const redirectUrl = `https://discordapp.com/api/oauth2/authorize?client_id=${
+      req.client.user.id
+    }&redirect_uri=${encodeURIComponent(
+      req.client.config.DASHBOARD.baseURL + "/api/callback"
+    )}&response_type=code&scope=identify%20guilds&state=${req.query.state || "no"}`;
+
+    console.log("Redirect URL:", redirectUrl);
+    return res.redirect(redirectUrl);
   }
   res.redirect("/selector");
 });
 
 router.get("/callback", async (req, res) => {
+  console.log("Callback received with query:", req.query);
+  console.log("Callback URL:", req.client.config.DASHBOARD.baseURL + "/api/callback");
+
   if (!req.query.code) {
     req.client.logger.debug({ query: req.query, body: req.body });
     req.client.logger.error("Failed to login to dashboard! Check /logs folder for more details");
