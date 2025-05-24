@@ -54,15 +54,22 @@ module.exports = {
     ENABLED: true,
     IDLE_TIME: 60, // Time in seconds before the bot disconnects from an idle voice channel
     MAX_SEARCH_RESULTS: 5,
-    DEFAULT_SOURCE: "SC", // YT = Youtube, YTM = Youtube Music, SC = SoundCloud
+    DEFAULT_SOURCE: "YTM", // YT = Youtube, YTM = Youtube Music, SC = SoundCloud
     // Add any number of lavalink nodes here
     // Refer to https://github.com/freyacodes/Lavalink to host your own lavalink server
     LAVALINK_NODES: [
       {
-        host: "lava-v4.ajieblogs.eu.org",
+        host: "lavalinkv3.devxcode.in",
         port: 443,
-        password: "https://dsc.gg/ajidevserver",
-        id: "Local Node",
+        password: "DevamOP",
+        id: "Primary",
+        secure: true,
+      },
+      {
+        host: "lavalink.devz.cloud", 
+        port: 443,
+        password: "mathiscool",
+        id: "Fallback",
         secure: true,
       },
     ],
