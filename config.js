@@ -59,10 +59,10 @@ module.exports = {
     // Refer to https://github.com/freyacodes/Lavalink to host your own lavalink server
     LAVALINK_NODES: [
       {
-        host: "lavalink.serenetia.com",
+        host: "lava-all.ajieblogs.eu.org",
         port: 80,
         password: "https://dsc.gg/ajidevserver",
-        id: "Serenetia-LDP-NonSSL",
+        id: "AjieDev-LDP-NonSSL",
         secure: false,
       },
     ],
